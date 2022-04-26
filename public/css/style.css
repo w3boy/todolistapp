@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+body{
+    font-family: 'Quicksand', sans-serif !important;
+    
+background: -webkit-linear-gradient(65deg, #ff8b7c 50%, #ffffff 50%);
+}
+
+
+input[type=checkbox]{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	display: inline-block;
+	position: relative;
+	background-color: #fefefe;
+	color: #ff8b7c;
+	top: 3px !important;
+	height: 18px;
+	width: 18px;
+	border: 2px solid #ff8b7c;
+	border-radius: 30px;
+	cursor: pointer;
+	margin-right: 4px;
+	outline: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+input[type=checkbox]:checked::before
+{
+	position: absolute;
+	font: 10px/1 'Ex';
+	left: 4px;
+	top: 1px;
+	color: #fff;
+	content: '\02143';
+	transform: rotate(40deg);
+}
+input[type=checkbox]:hover
+{
+	background-color: #ff8b7c;
+}
+input[type=checkbox]:checked
+{
+	background: #ff8b7c;
+}
+input[type=checkbox]+label{
+	margin-top:0px;
+	margin-left:2px;
+	color:#858482;
+}
+input[type=checkbox]:checked+label{
+    text-decoration:line-through;
+    color:lightgrey;
+}
+
+.notesarea {
+    display: block;
+    background-color: #fff;
+    box-shadow: 3px 2px 5px 3px #3333332c;
+    border-radius: 4px;
+}
+
+.notesarea ul{
+    padding: 0;
+    list-style: none;
+}
+.notesarea ul li{
+    padding: 15px 15px 8px 15px;
+    border-bottom: 1px solid rgb(236, 236, 236);
+    width: 100%;
+}
+.notesarea ul li:last-child{
+    border-bottom: none;
+    padding:0;
+}
+
+.notesarea ul li:last-child input[type="text"] {
+    border: none;
+    border-bottom: none;
+    padding: 15px;
+    display:inline-block;
+    width: 80%;
+    border-radius: 10px;
+}
+.notesarea ul li:last-child input[type="text"]:focus{
+    outline:none;
+}
+.notesarea ul li:last-child .addNotes {
+    border-radius: 100px;
+    position: relative;
+    right: -10px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    display: inline-block;
+    background-color:#ff8b7c;
+    border:none;
+    color: #fff;
+}
+.date {
+    background: #ff8b7c;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+    margin-bottom:10%;
+    border-radius: 4px;
+    box-shadow: 3px 2px 5px 3px #3333332c;
+}

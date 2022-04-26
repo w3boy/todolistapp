@@ -1,0 +1,31 @@
+<%- include('header')  %> 
+
+<section class="vh-100">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center h-100">
+        <div class="col col-lg-4 col-xl-4">
+            <div class="date">
+                <%= title %> 
+            </div>
+            <div class="notesarea">
+                <ul>
+                    <% for(var i = 0; i < allnotes.length; i++){ %>
+                        <li>
+                            <input type="checkbox">
+                            <label><%= allnotes[i] %> </label>
+                        </li>
+                    <% } %> 
+                    <li>
+                        <form action="/" method="post">
+                            <input type="text" name="note" placeholder="Add New Note" autocomplete="off">
+                            <button type="submit" name="submit" value="<%= title %>" class="addNotes"><i class="bi bi-plus-lg"></i></button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<%- include('footer')  %> 
